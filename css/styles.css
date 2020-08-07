@@ -257,35 +257,3 @@ transition: all .5s ease;
 
 
 
-/* TEXTO ANIMADO */
-.contenedor-h2 {
-  margin: 80px 220px;
-  display: table;
-}
-.texto-animado {
-  
-   color: rgb(214, 28, 108);
-   font-weight: 600;
-   position: relative;
-}
-
-.animacion-texto {
-  position: absolute;
-  right: 0;
-  width: 0;
-  background: rgb(245, 246, 246);
-  border-left: 1px solid black;
-
-  animation: maquina 5s alternate steps(38);
-}
-
-@keyframes maquina {
-  from {
-    width: 100%;
-    color: rgb(238, 239, 239);
-  }
-  to {
-    color: rgb(238, 239, 239);
-    width: 0;
-  }
-}
