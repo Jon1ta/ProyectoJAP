@@ -149,85 +149,143 @@ a.custom-card:hover {
   background-image: url(/img/cover_back.png);
   background-size: cover;
   background-attachment: fixed;
+  font-family: 'Raleway', serif !important;
 }
 
 .contenedor {
+  position: relative;
   width: 100%;
-  padding: 15px;
-  
-  
-  
-}
-
-.formulario {
-  background-color: white;
-  margin-top: 150px;
-  font-family: 'Raleway', serif !important;
-  padding: 3px;
-  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
-}
-
-h1 {
-  text-align: center;
-  color: #53C0FB;
-  font-size: 40px;
-  
-}
-
-input[type="text"],
-input[type="password"] {
-  font-size: 20px;
-  width: 82%;
-  padding: 10px;
-  border: none;
-}
-
-.input-contenedor {
-  margin-bottom: 15px;
-  border: 1px solid #aaa;
-}
-
-.icon {
-  min-width: 50px;
-  text-align: center;
-  color: #999;
-}
-
-.boton {
-  border: none;
-  width: 100%;
-  color: white;
-  font-size: 20px;
-  background: #53C0FB;
-  padding: 15px 20px;
+  max-width: 500px;
+  margin: 165px 1050px;
+  background: rgba(0,0,0,0.5);
+  -webkit-box-shadow: 7px -7px 14px 1px rgba(128,128,128,0.5);
+-moz-box-shadow: 7px -7px 14px 1px rgba(128,128,128,0.5);
+box-shadow: 7px -7px 14px 1px rgba(128,128,128,0.5);
+  color: #fff;
   border-radius: 5px;
+  
+  
+  
+  
+}
+
+.contenedor .toggle {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 100px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 25px;
+  text-align: center;
+  border-top: 2px solid rgb(214, 28, 108);
+  border-bottom: 2px solid rgb(214, 28, 108);
+  transition: all .5s ease;
   cursor: pointer;
 }
 
-.boton:hover {
-  background: cadetblue;
+.contenedor .toggle span {
+  letter-spacing: 1px;
+}
+.contenedor .toggle:hover {
+  border-top: 2px solid #53C0FB;
+  border-bottom: 2px solid #53C0FB;
 }
 
-p {
-  text-align: center;
+
+.contenedor h2 {
+  margin: 0 0 28px 0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
 }
 
-.link {
-  text-decoration: none;
-  color: #1a2537;
-  font-weight: 600;
+.contenedor input[type="text"],
+.contenedor input[type="password"],
+.contenedor input[type="email"] {
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  background: fff;
+  border: none;
+  border-radius: 2px;
+  border-bottom: 3px solid rgb(214, 28, 108);
+font-size: 14px;
+font-weight: normal;
+margin: 0 0 10px 0;
+transition: all .5s ease;
 }
 
-.link:hover {
-  color: cadetblue;
+.contenedor input[type="text"]:focus,
+.contenedor input[type="password"]:focus,
+.contenedor input[type="email"]:focus {
+  border-bottom: 3px solid #53C0FB ;
 }
 
-@media (min-width: 768px) {
-  .formulario {
-      
-      width: 500px;
-      margin-top: 180px;
-      margin-left: 1050px;
+
+.contenedor input[type="submit"] {
+  background: rgb(214, 28, 108);
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 10px 0;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+
+.contenedor input[type="submit"]:hover {
+  background: #0087F7;
+}
+
+.contenedor .form-login {
+  padding: 40px;
+  display: none;
+}
+
+.contenedor .form-login:nth-child(2) {
+  display: block;
+}
+
+.fijar {
+  margin-top: -136px;
+}
+
+
+
+/* TEXTO ANIMADO */
+.contenedor-h2 {
+  margin: 80px 220px;
+  display: table;
+}
+.texto-animado {
+  
+   color: rgb(214, 28, 108);
+   font-weight: 600;
+   position: relative;
+}
+
+.animacion-texto {
+  position: absolute;
+  right: 0;
+  width: 0;
+  background: rgb(245, 246, 246);
+  border-left: 1px solid black;
+
+  animation: maquina 5s alternate steps(38);
+}
+
+@keyframes maquina {
+  from {
+    width: 100%;
+    color: rgb(238, 239, 239);
+  }
+  to {
+    color: rgb(238, 239, 239);
+    width: 0;
   }
 }
-  
