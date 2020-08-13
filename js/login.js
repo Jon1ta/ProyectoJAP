@@ -10,16 +10,14 @@ let validacion = true;
 
 
 
-if(usuario.value === '') {
-alert("Debe completar el Usuario");
+if(usuario.value === "" || contraseña.value === "") {
+alert("Debe completar el Usuario Y la contraseña");
 validacion = false;
+}  else {
+  window.location = "login.html";
+};
 
-} if(contraseña.value === '') {
-    alert("Debe completar la Contraseña");
-    validacion = false;
-  } if (validacion) {
-    window.location = 'login.html';
-  }
+
   
 });
 
