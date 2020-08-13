@@ -169,24 +169,9 @@ box-shadow: 7px -7px 14px 1px rgba(128,128,128,0.5);
   
 }
 
-.contenedor .toggle {
-  position: absolute;
-  top: 7px;
-  right: 7px;
-  width: 100px;
-  height: 30px;
-  font-size: 12px;
-  line-height: 25px;
-  text-align: center;
-  border-top: 2px solid rgb(214, 28, 108);
-  border-bottom: 2px solid rgb(214, 28, 108);
-  transition: all .5s ease;
-  cursor: pointer;
-}
 
-.contenedor .toggle span {
-  letter-spacing: 1px;
-}
+
+
 .contenedor .toggle:hover {
   border-top: 2px solid #53C0FB;
   border-bottom: 2px solid #53C0FB;
@@ -251,8 +236,8 @@ transition: all .5s ease;
   display: block;
 }
 
-.fijar {
-  margin-top: -136px;
+#parrafo {
+  display: inline;
 }
 
 

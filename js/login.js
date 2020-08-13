@@ -3,14 +3,23 @@
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
 
-$('.toggle').click(function(){
-   $('.form-login').animate({
-       height: "toggle",
-       'padding-top': 'toggle',
-       'padding-bottom': 'toggle',
-       opacity: 'toggle'
-   }, "slow");
-});
+document.getElementById('submit').addEventListener('click', function(e) {
+let usuario = document.getElementById('usuario');
+let contraseña = document.getElementById('contraseña');
+
+
+
+if(usuario.value === '') {
+alert("Debe completar el Usuario");
+
+} if(contraseña.value === '') {
+    alert("Debe completar la Contraseña");
+  }
+  
+})
+
+
+    
 
 
 
