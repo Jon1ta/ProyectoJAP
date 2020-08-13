@@ -60,7 +60,7 @@ function showProductsList(){
             `
         }
 
-        document.getElementById("prod-list-container").innerHTML = htmlContentToAppend;
+        document.getElementById("product-list-container").innerHTML = htmlContentToAppend;
     }
 }
 
