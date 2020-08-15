@@ -11,7 +11,7 @@ let validacion = true;
 
 
 if(usuario.value === "" || contraseña.value === "") {
-alert("Debe completar el Usuario Y la contraseña");
+alert("Debe completar el usuario Y la contraseña");
 validacion = false;
 
 } if(validacion) {
