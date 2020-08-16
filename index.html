@@ -13,29 +13,68 @@
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styleLogin.css">
   <script src="https://kit.fontawesome.com/480856b811.js" crossorigin="anonymous"></script>
   
 </head>
 
-<body class="login-body">
-  
-<div class="contenedor">
-  <div class="toggle">
+<body class="login-registro">
+
+
     
-  </div>  
-<div class="form-login">
-  <h2>Iniciar Sesión</h2>
-  <div>
-<input id="usuario" class="formulario_input" type="text" name="usuario" placeholder="Usuario">
-<input id="contraseña" class="formulario_input" type="password" name="contraseña" placeholder="Contraseña">
-<input id="submit" class="formulario_input" type="submit" value="Iniciar Sesíon">
-
+  <div class="container" id="container">
+      <div class="form-container sign-up-container">
+          <form action="#">
+              <h1>Crear cuenta</h1>
+              <div class="social-container">
+                  <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                  <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+              <span> Descubrí los productos de e-Mercado</span>
+              <input id="nombre-registro" type="text" placeholder="Name" />
+              <input id="email-registro" type="email" placeholder="Email" />
+              <input id="contraseña-registro" type="password" placeholder="Password" />
+              <button id="boton-registro">Registrarse</button>
+          </form>
+      </div>
+      <div class="form-container sign-in-container">
+          <form action="#">
+              <h1>Iniciá Sesión</h1>
+              <div class="social-container">
+                  <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                  <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+              <span> Encontrá lo que estas buscando</span>
+              <input id="email" type="email" placeholder="Email" />
+              <input id="contraseña" type="password" placeholder="Password" />
+              <a href="#">¿Olvidaste la contraseña?</a>
+              <button id="boton">Iniciar sesión</button>
+          </form>
+      </div>
+      <div class="overlay-container">
+          <div class="overlay">
+              <div class="overlay-panel overlay-left">
+                  <h1>Bienvenido <br>de nuevo!</h1>
+                  <p>Para seguir conectado con nosotros inicia sesión aquí</p>
+                  <button class="ghost" id="signIn">Iniciar sesión</button>
+              </div>
+              <div class="overlay-panel overlay-right">
+                  <h1>Hola!, bienvenido a <br>e-Mercado</h1>
+                  <p>Llená los campos y disfrutá de nuestros productos</p>
+                  <button class="ghost" id="signUp">Registrarse</button>
+              </div>
+          </div>
+      </div>
   </div>
-</div>
+  
+  
 
-</div>
-  <script src="js/init.js"></script>
-  <script src="js/login.js"></script>
- 
+
+
+
+  <script src="/js/login.js"></script>
+  <script src="/js/init.js"></script>
 </body>
 </html>
