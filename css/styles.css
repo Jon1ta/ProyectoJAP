@@ -139,7 +139,15 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+/* cerrar sesion  */
+.cerrar-sesion {
+  color: white!important;
+  cursor: pointer;
 
+}
+.cerrar-sesion:hover {
+  color: rgb(214, 28, 108)!important;
+}
 
 
 

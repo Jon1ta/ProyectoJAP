@@ -15,26 +15,27 @@ container.classList.remove('right-panel-active')
 
 
 /* Validando el Login */
-document.getElementById('boton').addEventListener('click', function(e) {
-    let email = document.getElementById('email');
-    let contraseña = document.getElementById('contraseña');
-    let validacion = true;
-    
-    
-    
-    if(email.value === "" || contraseña.value === "") {
-    alert("Debe completar el usuario Y la contraseña");
-    validacion = false;
-    
-    } if(validacion) {
-      location.href = 'login.html';
-    }
-    
-    
-    
-    
-      
-    });
+function guardar(usuario, pass){  
+
+  if (usuario.trim()==="" || pass.trim()===""){ //Chequea que el usuario recibido no esté vacío. 
+  //El método trim elimina los espacios en blanco al inicio y al final del mismo.
+      alert("El usuario está vacío");
+  }    else{
+  localStorage.setItem("usuario", usuario.trim()); //setItem almacena el usuario en la posición "usuario"
+  localStorage.setItem("password", pass.trim()); // Almaceno la contraseña
+  sessionStorage.setItem("usuario", usuario.trim());
+  alert (" Usuario : " + usuario + " Password : " + pass ); 
+  
+ 
+  location.href="login.html";
+  
+  //getItem obtiene el dato almacenado en la posición "usuario"
+ 
+  }
+}
+
+
+
 
 /* Validamos el registro */
     document.getElementById('boton-registro').addEventListener('click', function(e) {
