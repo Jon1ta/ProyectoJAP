@@ -20,16 +20,16 @@ function guardar(usuario, pass){
   if (usuario.trim()==="" || pass.trim()===""){ //Chequea que el usuario recibido no esté vacío. 
   //El método trim elimina los espacios en blanco al inicio y al final del mismo.
       alert("El usuario está vacío");
-  }    else{
+  }    else {
   localStorage.setItem("usuario", usuario.trim()); //setItem almacena el usuario en la posición "usuario"
   localStorage.setItem("password", pass.trim()); // Almaceno la contraseña
-  sessionStorage.setItem("usuario", usuario.trim());
+  
   alert (" Usuario : " + usuario + " Password : " + pass ); 
   
  
   location.href="login.html";
   
-  //getItem obtiene el dato almacenado en la posición "usuario"
+  
  
   }
 }
