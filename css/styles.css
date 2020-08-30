@@ -250,3 +250,18 @@ transition: all .5s ease;
 
 
 
+
+
+
+/* icono buscador */
+
+.icono-search {
+  color: #0087F7;
+}
+
+.btn-search {
+  border-radius: 5px;
+}
+.btn-search:hover {
+  transform: rotate(6deg);
+}
