@@ -153,100 +153,19 @@ a.custom-card:hover {
 
 
 /** PAGINA DE LOGIN Y REGISTRO **/
-.login-body {
-  background-image: url(/img/cover_back.png);
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: 'Raleway', serif !important;
-}
 
-.contenedor {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-  margin: 165px 1050px;
-  background: rgba(0,0,0,0.5);
-  -webkit-box-shadow: 7px -7px 14px 1px rgba(128,128,128,0.5);
--moz-box-shadow: 7px -7px 14px 1px rgba(128,128,128,0.5);
-box-shadow: 7px -7px 14px 1px rgba(128,128,128,0.5);
-  color: #fff;
-  border-radius: 5px;
   
   
   
   
-}
 
 
 
 
-.contenedor .toggle:hover {
-  border-top: 2px solid #53C0FB;
-  border-bottom: 2px solid #53C0FB;
-}
 
 
-.contenedor h2 {
-  margin: 0 0 28px 0;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1;
-}
-
-.contenedor input[type="text"],
-.contenedor input[type="password"],
-.contenedor input[type="email"] {
-  outline: none;
-  display: block;
-  width: 100%;
-  padding: 10px 15px;
-  background: fff;
-  border: none;
-  border-radius: 2px;
-  border-bottom: 3px solid rgb(214, 28, 108);
-font-size: 14px;
-font-weight: normal;
-margin: 0 0 10px 0;
-transition: all .5s ease;
-}
-
-.contenedor input[type="text"]:focus,
-.contenedor input[type="password"]:focus,
-.contenedor input[type="email"]:focus {
-  border-bottom: 3px solid #53C0FB ;
-}
 
 
-.contenedor input[type="submit"] {
-  background: rgb(214, 28, 108);
-  color: #fff;
-  border: none;
-  width: 100%;
-  padding: 10px 0;
-  font-weight: normal;
-  letter-spacing: 1px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all .5s ease;
-}
-
-
-.contenedor input[type="submit"]:hover {
-  background: #0087F7;
-}
-
-.contenedor .form-login {
-  padding: 40px;
-  display: none;
-}
-
-.contenedor .form-login:nth-child(2) {
-  display: block;
-}
-
-#parrafo {
-  display: inline;
-}
 
 
 
