@@ -152,7 +152,15 @@ a.custom-card:hover {
 
 
 
-/** PAGINA DE LOGIN Y REGISTRO **/
+.valoracion label {
+color: darkgoldenrod;
+}
+
+#formularioComment {
+  border: 1px solid grey;
+  padding: 25px;
+  
+}
 
   
   

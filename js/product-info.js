@@ -85,23 +85,17 @@ function showComments(array){
         document.getElementById("comments").innerHTML = htmlContentToAppend;
 }
 
-//separador de miles para el precio
-function commaSeparateNumber(val){ 
-    while (/(\d+)(\d{3})/.test(val.toString())){ 
-     val = val.toString().replace(/(\d+)(\d{3})/, '$1'+'.'+'$2'); 
-    } 
-    return val; 
-    } 
 
-//calcular la fecha actual
+
+//Funcion que muestra la fecha actual y la hora
 function fechaDeHoy(){
     
     var hoy = new Date();
     if ((hoy.getMonth()+1)<10){
         var mes="0"+(hoy.getMonth()+1);
     };
-    if (hoy.getDate()<10){
-        var dia="0"+hoy.getDate();
+    if (hoy.getDate()<32){
+        var dia=""+hoy.getDate();
     };
     var fecha = hoy.getFullYear() + '-' + mes + '-' + dia;
     var hora = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
@@ -110,8 +104,8 @@ function fechaDeHoy(){
     return fechaYHora;
 }
 
-//función para guardar el comentario en el array
-function saveComment(){
+//Funcion que guarda el comentario en el array
+function guardarComentario(){
 
     var userComment = {score:"", description:"", user:"", dateTime:""};
     var radios = document.getElementsByName("estrellas");
@@ -148,25 +142,26 @@ document.addEventListener("DOMContentLoaded", function(e){
             productDescriptionHTML.innerHTML = product.description;
             productCountHTML.innerHTML = product.soldCount;
             productCategoryHTML.innerHTML = product.category;
-            productPriceHTML.innerHTML = product.currency + " " + commaSeparateNumber(product.cost);
+            productPriceHTML.innerHTML = product.currency + " " + product.cost;
 
-            //Muestro las imagenes en forma de galería
+            //Muestra las imagenes de la galeria
             showImagesGallery(product.images);
             
         }
     });
-    //cargo el Json de los productos para poder mostrar los relacionados
+    
+    //Se carga el JSON de los productos para mostrar los relacionados dentro
     getJSONData(PRODUCTS_URL).then(function(resultObj){
         if (resultObj.status === "ok") { relatedProduct = resultObj.data; }
 
-        //Muestro los productos relacionados
+        //Muestra los productos relacionados
         showRelatedProducts(product.relatedProducts);
     });
-    //cargo el Json de los comentarios para poder mostrarlos
+    //Cargamos el JSON de los comentarios para poder mostrarlos
     getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function(resultObj){
         if (resultObj.status === "ok") { comments = resultObj.data; }
 
-        //Muestro los comentarios
+        //Se muestran los comentarios
         showComments(comments);
     });
 });
