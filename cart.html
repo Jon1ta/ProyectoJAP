@@ -31,6 +31,8 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/dropzone.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/usermenu.css">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -41,8 +43,22 @@
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
       <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-      <a id="mostrar_usuario" class="py-2 d-none d-md-inline-block text-light"></a>
-        <a class="py-2 d-none d-md-inline-block cerrar-sesion" onclick="localStorage.clear(); alert('Usuario desconectado'); location.href='index.html';" >Cerrar Sesión</a>
+      <div class="user-menu">
+        <div class="user-menu-item">
+          
+          <div class="user-name-wrapper">
+            <a id="mostrar_usuario" class="py-2 d-none d-md-inline-block text-light"></a><i class="fa fa-caret-down"></i>
+          </div>
+        </div>
+        <div class="user-dropdown">
+          <a href="#" class="dropdown-item cerrar-sesion"><span class="mr-3"><i class="fa fa-home"></i></span> Inicio</a>
+          <a href="#" class="dropdown-item cerrar-sesion"><span class="mr-3"><i class="fa fa-user"></i></span> Perfil</a>
+          <a href="#" class="dropdown-item cerrar-sesion"><span class="mr-3"><i class="fa fa-building"></i></span> Configuracion</a>
+          <a href="#" class="dropdown-item cerrar-sesion"><span class="mr-3"><i class="fa fa-credit-card"></i></span> Mi carrito</a>
+          <a href="#" class="dropdown-item cerrar-sesion"><span class="mr-3"><i class="fa fa-exclamation-circle"></i></span> Reportar problema</a>
+          <a class="dropdown-item cerrar-sesion" onclick="localStorage.clear(); alert('Usuario desconectado'); location.href='index.html';" ><span class="mr-3"><i class="fa fa-power-off"></i></span> Cerrar Sesion</a>
+        </div>
+      </div>
     </div>
   </nav>
   <div class="container p-5">
@@ -67,6 +83,8 @@
   <script src="js/init.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/usuario_logueado.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script><script  src="./script.js"></script>
+    <script src="js/usermenu.js"></script>
 </body>
 
 </html>

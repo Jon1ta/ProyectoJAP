@@ -1,0 +1,80 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+
+.user-dropdown, .user-menu {
+  position: absolute;
+  right: 0;
+  
+  cursor: pointer; 
+}
+
+.user-menu {
+  z-index: 10;
+  bottom: 3px;
+}
+
+
+
+.user-menu-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+
+.user-name-wrapper {
+  padding-left: 1rem;
+}
+
+.user-name-wrapper i {
+  padding: 0 0.3rem;
+  margin-top: 30px;
+}
+
+
+
+.user-menu.show .user-dropdown {
+  box-shadow: -2px 4px 7px #ccc;
+  display: block;
+}
+
+.user-dropdown {
+  position: absolute;
+  top: 70px;
+  display: none;
+  right: 0;
+  width: 220px;
+  background-color: rgb(53, 58, 64);
+  cursor: pointer;
+}
+
+.dropdown-item {
+  color:  rgb(211, 30, 111);
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+.dropdown-item:active, .dropdown-item:hover {
+  background-color: #EBF5FF;
+}
+
+.dropdown-item span {
+  color: #03A9FA;
+  display: inline-block;
+  width: 24px;
+  text-align: center;
+}
