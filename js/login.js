@@ -33,7 +33,7 @@ function guardar(usuario, pass){
  
   }
 }
-guardar();
+
 
 
 
