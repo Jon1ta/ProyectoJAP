@@ -54,7 +54,7 @@ a {
     margin-right: 600px;
 }
 
-.form-container .form {
+.form-container form {
     background: #fff;
     display: flex;
     flex-direction: column;
