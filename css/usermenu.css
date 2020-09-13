@@ -23,8 +23,11 @@ body {
 .user-menu {
   z-index: 10;
   bottom: 3px;
-}
 
+}
+#mostrar_usuario:hover{
+  color: rgb(214, 28, 108)!important;
+}
 
 
 .user-menu-item {

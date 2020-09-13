@@ -158,8 +158,11 @@ color: darkgoldenrod;
 
 #formularioComment {
   border: 1px solid grey;
+  border-radius: 5px;
   padding: 25px;
-  
+  -webkit-box-shadow: 10px 10px 11px -6px rgba(168,166,168,1);
+-moz-box-shadow: 10px 10px 11px -6px rgba(168,166,168,1);
+box-shadow: 10px 10px 11px -6px rgba(168,166,168,1);
 }
 
   
@@ -167,13 +170,35 @@ color: darkgoldenrod;
   
   
 
+.boton {
+  background-color:  rgb(214, 28, 108);
+  color: white;
+  border-radius: 5px;
+  border: 1px solid  rgb(214, 28, 108);
+}
+
+
+.boton:hover {
+  transition: .5s all ease-in-out;
+  background-color:  rgb(160, 80, 108);
+  
+}
+
+#textarea {
+  background-color: whitesmoke;
+}
 
 
 
 
 
-
-
+.d-none:hover {
+  color:  rgb(214, 28, 108);
+  text-decoration: none;
+  background-color: whitesmoke;
+  transition: all .5s ease;
+  border-radius: 5px;
+}
 
 
 
@@ -192,3 +217,4 @@ color: darkgoldenrod;
 .btn-search:hover {
   transform: rotate(6deg);
 }
+
