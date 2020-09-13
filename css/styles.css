@@ -195,7 +195,7 @@ box-shadow: 10px 10px 11px -6px rgba(168,166,168,1);
 .d-none:hover {
   color:  rgb(214, 28, 108);
   text-decoration: none;
-  background-color: whitesmoke;
+  
   transition: all .5s ease;
   border-radius: 5px;
 }
