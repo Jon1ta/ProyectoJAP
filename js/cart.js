@@ -55,6 +55,7 @@ function subtotalDelArticulo(moneda, precio, cantidad){
     return precio*cantidad;
 }
 
+
 // Coma en el precio
 function separadorDelPrecio(val){ 
     while (/(\d+)(\d{3})/.test(val.toString())){ 
