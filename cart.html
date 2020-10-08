@@ -12,27 +12,15 @@
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
 
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
+  
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/dropzone.css" rel="stylesheet">
   <link rel="stylesheet" href="css/usermenu.css">
   <link href="css/font-awesome.min.css" rel="stylesheet">
+  
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+
 </head>
 
 <body>
@@ -54,7 +42,7 @@
         
           <a href="my-profile.html" class="dropdown-item cerrar-sesion"><span class="mr-3"><i class="fa fa-user"></i></span> Mi Perfil</a>
           <a href="#" class="dropdown-item cerrar-sesion"><span class="mr-3"><i class="fa fa-building"></i></span> Configuracion</a>
-          <a href="cart.html" class="dropdown-item cerrar-sesion"><span class="mr-3"><i class="fa fa-credit-card"></i></span> Mi carrito</a>
+          <a href="cart.html" class="dropdown-item cerrar-sesion"><span class="mr-3"><i class="fa fa-credit-card"></i></span> Mi carrito <badge class="badge badge-pill badge-danger" id="badgeCarrito"></badge></a>
           <a href="#" class="dropdown-item cerrar-sesion"><span class="mr-3"><i class="fa fa-exclamation-circle"></i></span> Reportar problema</a>
           <a class="dropdown-item cerrar-sesion" onclick="localStorage.clear(); alert('Usuario desconectado'); location.href='index.html';" ><span class="mr-3"><i class="fa fa-power-off"></i></span> Cerrar Sesion</a>
         </div>
@@ -62,14 +50,171 @@
     
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 11/10/2020) y Entrega 6 (Fecha de entrega: 25/10/2020).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
+  <div class="text-center p-4">
+    <h2>Mi Carrito</h2>
   </div>
+  <!-- productos del carrito -->
+  <div class="container align-middle align-center">
+    <table id="cart-list-container" class="table" style="width:100%;"></table>
+  </div>
+
+  
+   
+      
+  
+    <div class="contenedor-form">
+      <form  id="send-info">
+        <div class="row altura">
+          <h4 class="mb-3 mr-3">Tipo de envío : </h4>
+          <div class="d-block my-3">
+            <div class="input-group">
+              <input id="envio_premium" name="sendType" type="radio"   required="" value=0.15>
+              <label  for="envio_premium">Premium (2 a 5 días)</label>
+            </div>
+            <div class="input-group">
+              <input id="envio_express" name="sendType" type="radio"  required="" value=0.07>
+              <label  for="envio_express">Express (5 a 8 días)</label>
+            </div>
+            <div class="input-group">
+              <input id="envio_standar" name="sendType" type="radio"  required="" value=0.05>
+              <label  for="envio_standar">Standar (12 a 15 días)</label>
+            </div>
+            
+          </div>
+          <h4 class="mb-3">Costos :</h4>
+        <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Precio :</h6>
+                <small class="text-muted">Subtotal de los productos</small>
+              </div>
+              <span class="text-muted" id="productPrice">-</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Envío :</h6>
+                <small class="text-muted">Según el tipo de envío</small>
+              </div>
+              <span class="text-muted" id="sendPrice">-</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Total a pagar :</span>
+              <strong id="totalAPagar">-</strong>
+            </li>
+          </ul>
+        </div>
+        <div class="row">
+          <h4>Dirección de envío</h4>
+          <div class="input-group input-group-icon">
+            
+            <input type="text" placeholder="Nombre Completo"/>
+            <div class="input-icon"><i class="fa fa-user"></i></div>
+          </div>
+          <div class="input-group input-group-icon">
+            <input type="text" placeholder="Calles, esquina y numero de puerta"/>
+            <div class="input-icon"><i class="fa fa-envelope"></i></div>
+          </div>
+          <div class="input-group input-group-icon">
+            <input type="text" placeholder="Teléfono de contacto"/>
+            <div class="input-icon"><i class="fa fa-phone"></i></div>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="col-half">
+            <h4>Fecha de nacimiento</h4>
+            <div class="input-group">
+              <div class="col-third">
+                <input type="number" max="31" placeholder="DD"/>
+              </div>
+              <div class="col-third">
+                <input type="number" max="12" placeholder="MM"/>
+              </div>
+              <div class="col-third">
+                <input type="number" max="2100" placeholder="YYYY"/>
+              </div>
+            </div>
+          </div>
+          <div class="col-half">
+            <h4>Género</h4>
+            <div class="input-group">
+              <input type="radio" name="gender" value="male" id="gender-male"/>
+              <label for="gender-male">M</label>
+              <input type="radio" name="gender" value="female" id="gender-female"/>
+              <label for="gender-female">F</label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <h4>Detalles del pago</h4>
+          <div class="input-group">
+            <input type="radio" name="payment-method" value="card" id="payment-method-card" checked="true"/>
+            <label for="payment-method-card"><span><i class="fa fa-cc-visa"></i>Tarjeta de Credito</span></label>
+            <input type="radio" name="payment-method" value="paypal" id="payment-method-paypal"/>
+            <label for="payment-method-paypal"> <span><i class="fa fa-cc-paypal"></i>Paypal</span></label>
+          </div>
+          <div class="input-group input-group-icon">
+            <input type="text" placeholder="Numero de tarjeta"/>
+            <div class="input-icon"><i class="fa fa-credit-card"></i></div>
+          </div>
+          <div class="col-half">
+            <div class="input-group input-group-icon">
+              <input type="text" placeholder="Tarjeta CVC"/>
+              <div class="input-icon"><i class="fa fa-user"></i></div>
+            </div>
+          </div>
+          <div class="col-half">
+            <div class="input-group">
+              <select>
+                <option>Enero</option>
+                <option>Febrero</option>
+                <option>Marzo</option>
+                <option>Abril</option>
+                <option>Mayo</option>
+                <option>Junio</option>
+                <option>Julio</option>
+                <option>Agosto</option>
+                <option>Setiembre</option>
+                <option>Octubre</option>
+                <option>Noviembre</option>
+                <option>Diciembre</option>
+              </select>
+              <select>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+                <option>2023</option>
+                <option>2024</option>
+                <option>2025</option>
+                <option>2026</option>
+                <option>2027</option>
+                <option>2028</option>
+                <option>2029</option>
+                <option>2030</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <h4>Bases y condiciones</h4>
+          <div class="input-group">
+            <input type="checkbox" id="terms"/>
+            <label for="terms">Acepto las bases y condiciones previamente leidas junto con las politicas de seguridad.</label>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-lg boton" type="submit">Comprar</button>
+      </form>
+    </div>
+  
+
+  <footer class="text-muted">
+    <div class="container">
+        <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
+        <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+    </div>
+  </footer>
+
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
@@ -78,6 +223,7 @@
       <div></div>
     </div>
   </div>
+  
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/dropzone.js"></script>
